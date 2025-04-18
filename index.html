@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Astronomy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</meta>
+
+<style>
+body {
+    background-color:#003366;
+    color:white; 
+    text-align:center;
+    margin-top:75;    
+    }
+    h2 { 
+    color:white;
+    }
+    h1 {
+    color:white;
+    }
+    
+    img { 
+    border:5px double black;
+    border-radius:20%;
+    height:350px;
+    width:400px;
+    }
+    button {
+      background-color: rgb(6, 127, 255);
+      font-family: sans-serif;
+      color: white;
+      border-radius: 25px;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+    }
+    
+    footer {
+    margin-top: 50px; 
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    position: relative;
+} 
+ul {
+  text-align: left; 
+  margin: auto;
+  width:60%;
+}
+.timeline-box {
+  background-color: #002244; 
+  color: white; 
+  padding: 20px; 
+  margin: 20px auto; 
+  border-radius: 10px; 
+  width: 80%; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  text-align: left; 
+}
+
+.timeline-box h3 {
+  text-align: center; 
+  color: #6db3f2; 
+}
+
+.timeline-box ul {
+  list-style-position: inside; 
+  padding: 0; 
+}
+
+.timeline-box ul li {
+  margin: 10px 0;
+  line-height: 1.6; 
+  }
+  .navbar {
+    background-color: #002244;
+    color: white; 
+    padding: 10px 20px; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+
+  .navbar h1 {
+    margin: 0; 
+    font-size: 1.5rem; 
+  }
+  .navbar {
+    background-color: #002244; 
+    color: white; 
+    padding: 10px 20px; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+
+  .navbar h1 {
+    margin: 0; 
+    font-size: 1.5rem; 
+  }
+  .navbar a {
+    color: white; 
+    text-decoration: none; 
+    margin: 0 15px; 
+    font-size: 1rem; 
+  }
+
+  .navbar a:hover {
+    text-decoration: underline; 
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .navbar a {
+    color: white; 
+    text-decoration: none; 
+    margin: 0 15px; 
+    font-size: 1rem; 
+  }
+  .navbar a:hover {
+    text-decoration: underline; 
+  }
+  .modern-button {
+    background-color: #007BFF; /* Primary blue color */
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  .modern-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  .modern-button:active {
+    transform: translateY(0); /* Reset lift effect on click */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  }
+  .timeline ul {
+    list-style-position: inside; 
+    display: inline-block; 
+    text-align: right; 
+    margin: 0 auto; 
+  }
+
+  #about {
+    text-align: center; 
+  }
+
+  h3 {
+    text-align: center; 
+  }
+  .timeline ul li {
+  margin: 5px 0; 
+  text-align: right;
+  }
+  /* General styles for tablets and smaller screens */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Reduce font size for smaller screens */
+    margin: 0; /* Remove unnecessary margins */
+  }
+
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .navbar a {
+    margin: 5px 0; /* Reduce spacing between links */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .timeline-box {
+    width: 90%; /* Make the timeline box narrower */
+    padding: 15px; /* Adjust padding */
+  }
+
+  img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  button {
+    width: 100%; /* Make buttons full-width */
+    padding: 10px; /* Adjust padding */
+    font-size: 1rem; /* Adjust font size */
+  }
+}
+
+/* Styles for very small screens (phones) */
+@media (max-width: 480px) {
+  h1, h2, h3 {
+    font-size: 1.2rem; /* Reduce heading sizes */
+  }
+
+  .navbar h1 {
+    font-size: 1.2rem; /* Adjust navbar title size */
+  }
+
+  .timeline-box ul li {
+    font-size: 0.9rem; /* Reduce font size for list items */
+  }
+
+  .contact {
+    padding: 10px; /* Adjust padding for the contact section */
+  }
+}
+  </style>
+  <body>
+  <div class="navbar">
+    <h1>Astronomy & Astrophysics</h1>
+    <div>
+      <a href="#about">About</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#branches">Branches</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div id="about" style="padding-top: 80px; margin-top: -80px;">
+    <h1>About Astronomy</h1>
+    <p>Astronomy is the scientific study of celestial objects...</p>
+  </div>
+  <div style="margin: 20px; text-align: center;">
+  <input 
+    type="text" 
+    id="searchBar" 
+    placeholder="Search..." 
+    style="padding: 10px; width: 300px; border-radius: 5px; border: 1px solid #ccc;"
+  />
+  <button 
+    onclick="searchContent()" 
+    style="padding: 10px 20px; background-color: rgb(6, 127, 255); color: white; border: none; border-radius: 5px; cursor: pointer;"
+  >
+    Search
+  </button>
+</div>
+<script>
+  function searchContent() {
+    const query = document.getElementById('searchBar').value.toLowerCase();
+    const bodyText = document.body.innerText.toLowerCase();
+
+    if (query && bodyText.includes(query)) {
+      alert(`Found: "${query}"`);
+    } else {
+      alert('No results found.');
+    }
+  }
+</script>
+  <IMG SRC = "C:/Users/rainy/Downloads/Telescope image.jpg.">
+    <br> <h1>What is Astronomy?</h1> 
+    Astronomy is the scientific study of celestial objects, such as stars, planets, comets, galaxies, and the phenomena associated with them. Using principles from mathematics, physics, and chemistry, astronomers aim to understand the origin, evolution, and eventual fate of the universe. It encompasses the exploration of natural phenomena beyond Earth's atmosphere, including star formation, black holes, and cosmic radiation.<br>
+    <button>
+      <a href="https://en.wikipedia.org/wiki/Astronomy">Astronomy Wikipedia</a>
+    </button>
+    <h3> Cosmology: A Branch of Astronomy </h3>
+    Cosmology focuses specifically on the study of the universe's structure, origin, and evolution. It seeks to answer profound questions about the beginning of the universe, the forces shaping it, and its ultimate destiny.
+    <hr>
+    <h2> A Historical Perspective </h2>
+    Astronomy is one of humanity's earliest sciences. Ancient civilizations meticulously observed the skies to develop calendars, navigate oceans, and connect their beliefs to celestial events. For example:
+    - Egyptians aligned their pyramids with celestial bodies.<br>
+    - Babylonians developed early star catalogs and tracked planetary movements.<br>
+    - Ancient Indians contributed significantly to planetary theories.<br>
+    - Maya and other indigenous peoples crafted precise celestial calendars.
+    <div id="timeline" class="timeline">
+    </div>
+    <div class="timeline-box">
+      <h3>Timeline of Key Events in Astronomy</h3>
+      <ul>
+        <li><strong>3000 BCE:</strong> Ancient Egyptians align pyramids with celestial bodies.</li>
+        <li><strong>1609:</strong> Galileo Galilei uses a telescope to observe the night sky.</li>
+        <li><strong>1687:</strong> Isaac Newton publishes the laws of motion and universal gravitation.</li>
+        <li><strong>1929:</strong> Edwin Hubble discovers the universe is expanding.</li>
+        <li><strong>1990:</strong> The Hubble Space Telescope is launched, revolutionizing astronomy.</li>
+        <li><strong>2021:</strong> The James Webb Space Telescope is launched to explore the universe further.</li>
+      </ul>
+    </div>
+    <br>Over time, tools like the telescope, introduced in the 17th century by pioneers like Galileo Galilei, revolutionized our understanding of the cosmos.
+    <hr>
+    <div id="branches" style="padding-top: 80px; margin-top: -80px;">
+    <h1>Branches of Astronomy</h1>
+    Astronomy can be divided into professional disciplines and observational specialties:<br>
+    <h2>1. Observational Astronomy:</h2>
+    This branch focuses on gathering data by observing celestial objects and phenomena. The data, often collected through telescopes and satellites, is then analyzed using physical principles. Observational astronomy splits into various subfields based on the wavelength studied:<br>
+    - Radio Astronomy: Observes radio waves emitted by celestial bodies, revealing phenomena like pulsars and supernovae.<br>
+    - Infrared Astronomy: Studies cool objects, nebulae, and star-forming regions obscured by cosmic dust.<br>
+    - Optical Astronomy: Observes the visible spectrum and has transitioned from hand-drawn records to modern CCD-based imaging systems.<br>
+    - Ultraviolet Astronomy: Focuses on hot, high-energy stars and phenomena, requiring space-based observation due to Earth's atmospheric absorption.<br>
+    - X-ray Astronomy: Investigates energetic processes like black holes and galaxy clusters using high-altitude or space-based instruments.<br>
+    - Gamma-ray Astronomy: Explores short-wavelength phenomena like gamma-ray bursts and black hole interactions.
+    
+    <h2>2. Theoretical Astronomy: </h2>
+    Theoretical astronomers use mathematical models and simulations to predict, explain, or interpret observational data. Their work complements observational astronomy, creating a full picture of how celestial systems form and evolve.
+    <hr>
+    <h2>Tools of Astronomy</h2>
+    Astronomical exploration relies on a variety of tools:<br>
+    - Ground-based Telescopes: Optical telescopes located in high, dry locations to minimize atmospheric interference.<br>
+    - Space Telescopes: Platforms like the Hubble Space Telescope, designed to bypass Earth's atmosphere and capture clearer data.<br>
+    - Radio Arrays: Networks of radio telescopes used to study wavelengths that penetrate the atmosphere.<br>
+    - Supercomputers: Enable simulations of cosmic phenomena, such as galaxy formation or the behavior of black holes.<br>
+    <hr>
+    
+    <h2>Why Study Astronomy?</h2>
+    The pursuit of astronomy is driven by our innate curiosity about our place in the cosmos. It helps address questions like:<br>
+    - How did the universe begin?<br>
+    - What are the fundamental laws of nature governing the cosmos?<br>
+    - Are we alone in the universe?<br>
+    
+    Beyond intellectual curiosity, astronomy has practical applications. It has influenced technology development, from advances in imaging and computing to the creation of satellite-based systems enabling GPS and telecommunications.<br>
+    <hr>
+    
+    <h1> What is Astrophysics? </h1>
+    Astrophysics explores the physics and chemistry behind the celestial objects and phenomena of the universe. From stars and planets to galaxies and cosmic radiation, this fascinating field seeks to uncover the nature of the cosmos. James Keeler, a pioneer in the field, famously described it as the quest to understand “what [heavenly bodies] are, rather than where they are.”<br>
+    <button>
+      <a href="https://en.wikipedia.org/wiki/Astrophysics">Astrophysics Wikipedia</a>
+    </button>
+    Key Areas of Study:<br>
+    - Solar Physics: Investigating the Sun’s structure and behavior.<br>
+    - Galactic Phenomena: Studying stars, galaxies, and extrasolar planets.<br>
+    - Cosmic Medium: Exploring interstellar gas, dust, and the cosmic microwave background.<br>
+    - Electromagnetic Spectrum Analysis: Examining luminosity, temperature, density, and chemical composition of celestial bodies.
+    <hr>
+    <h1>Methods of Astrophysics</h1>
+    Astrophysics combines observational and theoretical approaches:
+    - <h2>Observational Astrophysics:</h2>
+    Utilizes telescopes and instruments to analyze data across wavelengths:- Radio Astronomy: Studies cold objects emitting radio waves.<br>
+    - Infrared Astronomy: Observes cooler objects like planets and nebulae.<br>
+    - Optical Astronomy: Captures visible light to study stars and galaxies.<br>
+    - High-Energy Astronomy: Explores phenomena using ultraviolet, X-ray, and gamma rays.
+    
+    - <h2>Theoretical Astrophysics:</h2>
+    Develops models to predict and explain astrophysical phenomena.Theoretical Astrophysics
+    Theoretical astrophysics focuses on the physics driving cosmic events, such as black holes, gravitational waves, and high-energy phenomena. It combines relativity, quantum mechanics, and particle physics to explore the universe's structure, origin, and future.
+    <hr>
+    <h2>Technological Marvels:</h2>
+    - Ground-based and space-based telescopes, such as Chandra and MAGIC, aid astrophysical observations.
+    - <br>Imaging air Cherenkov telescopes (IACTs) analyze high-energy phenomena with precision.
+    - <br>Computational methods simulate cosmic events, advancing our understanding.
+    <hr>
+    <h2> What's the difference between Astronomy and Astrophyics? </h2>
+    
+    Astronomy is the broader study of celestial objects like stars, planets, galaxies, and cosmic phenomena. It often involves observing and recording data about these objects using telescopes and imaging tools.<br>
+    
+    <h3> Meanwhile, </h3>
+    
+    Astrophysics, on the other hand, is a branch of astronomy that applies principles of physics and mathematics to understand the physical properties and processes governing celestial objects. It delves into phenomena like black holes, supernovae, and cosmic radiation. <br>
+    <hr>
+    <br><h1>Exploring the Universe: Astronomy Meets Astrophysics</h1>
+    
+    The universe is a vast and mysterious expanse, and two fields of science—astronomy and astrophysics—work hand-in-hand to unravel its secrets. Astronomy focuses on observing celestial objects like stars, planets, and galaxies, capturing the beauty of the cosmos through telescopes and imaging tools. Meanwhile, astrophysics dives deeper, applying the principles of physics to understand the forces and phenomena shaping these celestial wonders.<br>
+    
+    <br>Together, these disciplines help us answer profound questions: How do stars form and die? What lies at the heart of a black hole? Are we alone in the universe? From the dazzling light of distant galaxies to the invisible pull of dark matter, astronomy and astrophysics illuminate the cosmos, inspiring curiosity and discovery.<br>
+    <hr>
+    <br><h1> Some popular theories related to Astronomy and Astrophysics</h1>
+    
+    1. The Big Bang Theory: This is the leading explanation for the origin of the universe, suggesting it began as a singularity around 13.8 billion years ago and has been expanding ever since.<br>
+    
+    2. General Relativity: Proposed by Albert Einstein, this theory describes how massive objects like stars and planets warp spacetime, explaining phenomena like black holes and gravitational waves.<br>
+    
+    3. Dark Matter and Dark Energy: These mysterious components make up about 95% of the universe. Dark matter explains the unseen mass holding galaxies together, while dark energy drives the universe's accelerated expansion.<br>
+    
+    4. The Multiverse Theory: This proposes that our universe is just one of many, each with its own unique laws of physics and conditions.<br>
+    
+    5. The Ekpyrotic Universe Theory: An alternative to the Big Bang, this theory suggests the universe was formed from the collision of two "branes" in higher-dimensional space.<br>
+    
+    6. The Fermi Paradox: This addresses the contradiction between the high probability of extraterrestrial life and the lack of evidence for it, asking, "Where is everybody?" <br>
+    
+    7. The Holographic Principle: This mind-bending idea suggests that the entire universe could be a two-dimensional projection, much like a hologram.<br>
+    
+    <br><h4>*This content has been taken from Wikipedia and this content has been summarized*</h4>
+    <footer>
+      <h3><p>This website is edited by Yug Shrivastava. All rights reserved.</p></h3>
+    </footer>
+    <div id="contact us" class="contact">
+      <h1>Contact Us</h1>
+      <p>If you have any questions or feedback, feel free to reach out!</p>
+      <a href="mailto:yugshrivastava.10@gmail.com" style="color: white; text-decoration: none;">Email Us</a>
+    </div>
+    <footer>
+      <h3>
+        This website is licensed under a 
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" style="color: white;">Creative Commons Attribution 4.0 International License</a>.
+      </h3>
+    </footer>
+    
+    </body>
+    </html>
+    
+    
+
+ 
