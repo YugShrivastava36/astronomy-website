@@ -311,6 +311,26 @@ button a {
     star.style.left = `${Math.random() * 100}vw`;
     document.body.appendChild(star);
   }
+    #backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
     </script>
     <body>
       <div class="navbar">
@@ -491,50 +511,49 @@ button a {
   <button onclick="checkAnswer('C')">C. Earth</button>
   <button onclick="checkAnswer('D')">D. Mars</button>
 </div>
-
-<script>
-  function checkAnswer(answer) {
-    if (answer === 'A') {
-      alert('Correct! Jupiter is the largest planet.');
-    } else {
-      alert('Incorrect. The correct answer is Jupiter.');
-    }
-  }
-</script>
-  <h3>
+<h3>
     All Rights Reserved. No part of this website, including text, images, or code, may be reproduced, distributed, or transmitted in any form without the prior written permission of the owner.
   </h3>
 </footer>
-        <button onclick="scrollToTop()" id="backToTop" style="display: none; position: fixed; bottom: 20px; right: 20px; background-color: #007BFF; color: white; border: none; border-radius: 50%; padding: 10px 15px; cursor: pointer;">↑</button>
-
+      <!-- Back to Top Button -->
+<button id="backToTop" style="display: none;">↑</button>
 <script>
-  const backToTopButton = document.getElementById('backToTop');
+      function checkAnswer(answer) {
+        if (answer === 'A') {
+          alert('Correct! Jupiter is the largest planet.');
+        } else {
+          alert('Incorrect. The correct answer is Jupiter.');
+        }
+      }
+    
+     document.addEventListener('DOMContentLoaded', () => {
+        for (let i = 0; i < 100; i++) {
+          const star = document.createElement('div');
+          star.className = 'stars';
+          star.style.top = `${Math.random() * 100}vh`;
+          star.style.left = `${Math.random() * 100}vw`;
+          document.body.appendChild(star);
+        }
+    // Back to Top button functionality
+    const backToTopButton = document.getElementById('backToTop');
 
-  window.onscroll = function () {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      backToTopButton.style.display = 'block';
-    } else {
-      backToTopButton.style.display = 'none';
-    }
-  };
+    // Show the button when the user scrolls down 20px
+    window.onscroll = () => {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    };
 
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
-    <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    for (let i = 0; i < 100; i++) {
-      const star = document.createElement('div');
-      star.className = 'stars';
-      star.style.top = `${Math.random() * 100}vh`;
-      star.style.left = `${Math.random() * 100}vw`;
-      document.body.appendChild(star);
-    }
+    // Scroll back to the top when the button is clicked
+    backToTopButton.onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
   });
 </script>
-    </body>
-    </html>
+</body>
+</html>
     
     
 
