@@ -244,7 +244,35 @@ ul {
 
   .contact {
     padding: 10px; /* Adjust padding for the contact section */
-  }
+    }
+  #about h1, #about p {
+  text-align: center; /* Center the text horizontally */
+  margin: 20px auto; /* Add spacing and center the block */
+  width: 80%; /* Optional: Limit the width of the content */
+}
+#search-container {
+  display: flex;
+  justify-content: center; /* Center the search bar and button horizontally */
+  align-items: center; /* Align items vertically */
+  margin: 20px auto; /* Add spacing */
+}
+
+#searchBar {
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#searchButton {
+  padding: 10px 20px;
+  background-color: rgb(6, 127, 255);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px; /* Add spacing between the search bar and button */
+}
 }
   </style>
   <script>
@@ -255,7 +283,7 @@ ul {
     star.style.left = `${Math.random() * 100}vw`;
     document.body.appendChild(star);
   }
-</script>
+    </script>
     <body>
       <div class="navbar">
     <h1>Astronomy & Astrophysics</h1>
