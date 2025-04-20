@@ -8,9 +8,12 @@
 
 <style>
 body {
-  background: black;
+  background-color: #003366;
   color: white;
   overflow: auto;
+  margin-top: 75px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .stars {
@@ -19,6 +22,7 @@ body {
   background: white;
   position: absolute;
   animation: twinkle 2s infinite;
+  pointer-events:none;
 }
 
 @keyframes twinkle {
@@ -29,12 +33,6 @@ body {
     opacity: 0.5;
   }
 }
-    body {
-    background-color:#003366;
-    color:white; 
-    text-align:center;
-    margin-top:75;    
-    }
     h2 { 
     color:white;
     }
@@ -461,6 +459,17 @@ ul {
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+</script>
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.className = 'stars';
+      star.style.top = `${Math.random() * 100}vh`;
+      star.style.left = `${Math.random() * 100}vw`;
+      document.body.appendChild(star);
+    }
+  });
 </script>
     </body>
     </html>
