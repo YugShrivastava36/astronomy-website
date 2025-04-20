@@ -8,6 +8,28 @@
 
 <style>
 body {
+  background: black;
+  color: white;
+  overflow: hidden;
+}
+
+.stars {
+  width: 2px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+    body {
     background-color:#003366;
     color:white; 
     text-align:center;
@@ -221,14 +243,24 @@ ul {
   }
 }
   </style>
-  <body>
-  <div class="navbar">
+  <script>
+  for (let i = 0; i < 100; i++) {
+    const star = document.createElement('div');
+    star.className = 'stars';
+    star.style.top = `${Math.random() * 100}vh`;
+    star.style.left = `${Math.random() * 100}vw`;
+    document.body.appendChild(star);
+  }
+</script>
+    <body>
+      <div class="navbar">
     <h1>Astronomy & Astrophysics</h1>
     <div>
       <a href="#about">About</a>
       <a href="#timeline">Timeline</a>
       <a href="#branches">Branches</a>
       <a href="#contact">Contact</a>
+      <a href="#quiz">Quiz</a>
     </div>
   </div>
   <div id="about" style="padding-top: 80px; margin-top: -80px;">
@@ -391,12 +423,45 @@ ul {
   <a href="mailto:yugshrivastava.10@gmail.com" style="color: white; text-decoration: none;">Email Us</a>
 </div>
     <footer>
-      <h3>
-        This website is licensed under a 
-        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" style="color: white;">Creative Commons Attribution 4.0 International License</a>.
-      </h3>
-    </footer>
-    
+        <div id="quiz">
+  <h2>Quick Astronomy Quiz</h2>
+  <p>What is the largest planet in our solar system?</p>
+  <button onclick="checkAnswer('A')">A. Jupiter</button>
+  <button onclick="checkAnswer('B')">B. Saturn</button>
+  <button onclick="checkAnswer('C')">C. Earth</button>
+  <button onclick="checkAnswer('D')">D. Mars</button>
+</div>
+
+<script>
+  function checkAnswer(answer) {
+    if (answer === 'A') {
+      alert('Correct! Jupiter is the largest planet.');
+    } else {
+      alert('Incorrect. The correct answer is Jupiter.');
+    }
+  }
+</script>
+  <h3>
+    All Rights Reserved. No part of this website, including text, images, or code, may be reproduced, distributed, or transmitted in any form without the prior written permission of the owner.
+  </h3>
+</footer>
+        <button onclick="scrollToTop()" id="backToTop" style="display: none; position: fixed; bottom: 20px; right: 20px; background-color: #007BFF; color: white; border: none; border-radius: 50%; padding: 10px 15px; cursor: pointer;">↑</button>
+
+<script>
+  const backToTopButton = document.getElementById('backToTop');
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      backToTopButton.style.display = 'block';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
     </body>
     </html>
     
