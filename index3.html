@@ -119,7 +119,20 @@
                 function goToHome() {
                   window.location.href = "index.html"; // Redirects to Astronomy VS.html
               }
+             let score = 0;
 
+    function checkAnswer(userAnswer, correctAnswer) {
+        if (userAnswer === correctAnswer) {
+            score++;
+            alert(`Correct! ${correctAnswer} is the right answer.`);
+        } else {
+            alert(`Incorrect. The correct answer is ${correctAnswer}.`);
+        }
+    }
+
+    function showScore() {
+        alert(`Your final score is: ${score}`);
+    }
           </script>
             <div class="quiz-container">
               <h2>Question 1: Which is the closest planet to the Sun?</h2>
@@ -177,5 +190,6 @@
               <button onclick="checkAnswer('Apollo 11', 'Sputnik 1')">Apollo 11</button>
           </div>
             <button id="backToHome" onclick="goToHome()">Back to Home</button>    
+            <button onclick="showScore()">Show Score</button>
         </body>
         </html>
