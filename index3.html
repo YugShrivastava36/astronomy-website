@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Astronomy quiz!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color:#003366;
+                color: white;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
+            h1 {
+                text-align: center;
+            }
+            
+            .quiz-container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #004080; /* Slightly lighter background color */
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow for better visibility */
+            max-width: 600px;
+            width: 90%;
+            text-align: left;
+   }
+
+            .quiz-containter h2 {
+              font-size: 1.5rem;
+              margin-bottom: 15px;
+              color: #FFD700;
+            }
+            
+            button {
+                background-color:#007BFF;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 20px;
+                cursor: pointer;
+                font-size: 16px;
+                margin: 5px;
+                box-shadow: 0p 4px 6px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+                transition: all 0.3s ease; /* Added transition for smooth effect */
+            }
+            
+             button:hover {
+                background-color: #0056b3;
+                transform: translateY(-2px);
+                box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Complete the box-shadow property */
+                transition: all 0.3s ease; /* Add transition for smooth effect */
+             }
+             
+             @media (max-width: 768px) {
+                h1 {
+                    font-size: 1.8rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+                .quiz-container {
+                    padding: 15px;
+                }
+                button {
+                    font-size: 0.9rem;
+                    padding: 8px 15px;
+                }
+            }
+            @media (max-width: 480px) {}
+                h1 {
+                    font-size: 1.5rem;
+                }
+                p {
+                    font-size: 0.9rem;
+                }
+                .quiz-container {
+                    padding: 10px;
+                }
+                button {
+                    font-size: 0.8rem;
+                    padding: 6px 12px;
+                }
+             </style>
+         </head>
+        <body>
+            <h1>Astornomy Quiz!</h1>
+            <p>Welcome to the Astronomy quiz! Are you a pro astronomer? Let's find out!</p>
+            <script>
+              function checkAnswer(userAnswer, correctAnswer) {
+                  if (userAnswer === correctAnswer) {
+                      alert(`Correct! ${correctAnswer} is the right answer.`);
+                  } else {
+                      alert(`Incorrect. The correct answer is ${correctAnswer}.`);
+                  }
+              }
+          </script>
+            <div class="quiz-container">
+              <h2>Question 1: Which is the closest planet to the Sun?</h2>
+              <button onclick="checkAnswer('Mercury', 'Mercury')">Mercury</button>
+              <button onclick="checkAnswer('Venus', 'Mercury')">Venus</button>
+              <button onclick="checkAnswer('Earth', 'Mercury')">Earth</button>
+              <button onclick="checkAnswer('Mars', 'Mercury')">Mars</button>
+          </div>
+          
+          <div class="quiz-container">
+              <h2>Question 2: What is the largest planet in our solar system?</h2>
+              <button onclick="checkAnswer('Jupiter', 'Jupiter')">Jupiter</button>
+              <button onclick="checkAnswer('Saturn', 'Jupiter')">Saturn</button>
+              <button onclick="checkAnswer('Neptune', 'Jupiter')">Neptune</button>
+              <button onclick="checkAnswer('Uranus', 'Jupiter')">Uranus</button>
+          </div>
+          
+          <div class="quiz-container">
+              <h2>Question 3: What is the name of our galaxy?</h2>
+              <button onclick="checkAnswer('Milky Way', 'Milky Way')">Milky Way</button>
+              <button onclick="checkAnswer('Andromeda', 'Milky Way')">Andromeda</button>
+              <button onclick="checkAnswer('Triangulum', 'Milky Way')">Triangulum</button>
+              <button onclick="checkAnswer('Whirlpool', 'Milky Way')">Whirlpool</button>
+          </div>
+          
+          <div class="quiz-container">
+              <h2>Question 4: What is the hottest planet in our solar system?</h2>
+              <button onclick="checkAnswer('Venus', 'Venus')">Venus</button>
+              <button onclick="checkAnswer('Mercury', 'Venus')">Mercury</button>
+              <button onclick="checkAnswer('Mars', 'Venus')">Mars</button>
+              <button onclick="checkAnswer('Jupiter', 'Venus')">Jupiter</button>
+          </div>
+          
+          <div class="quiz-container">
+              <h2>Question 5: What is the name of the first human to travel into space?</h2>
+              <button onclick="checkAnswer('Yuri Gagarin', 'Yuri Gagarin')">Yuri Gagarin</button>
+              <button onclick="checkAnswer('Neil Armstrong', 'Yuri Gagarin')">Neil Armstrong</button>
+              <button onclick="checkAnswer('Buzz Aldrin', 'Yuri Gagarin')">Buzz Aldrin</button>
+              <button onclick="checkAnswer('John Glenn', 'Yuri Gagarin')">John Glenn</button>
+          </div>
+          
+          <div class="quiz-container">
+              <h2>Question 6: What is the name of the largest moon of Saturn?</h2>
+              <button onclick="checkAnswer('Titan', 'Titan')">Titan</button>
+              <button onclick="checkAnswer('Europa', 'Titan')">Europa</button>
+              <button onclick="checkAnswer('Ganymede', 'Titan')">Ganymede</button>
+              <button onclick="checkAnswer('Callisto', 'Titan')">Callisto</button>
+          </div>
+          
+          <div class="quiz-container">
+              <h2>Question 7: What is the name of the first artificial satellite launched into space?</h2>
+              <button onclick="checkAnswer('Sputnik 1', 'Sputnik 1')">Sputnik 1</button>
+              <button onclick="checkAnswer('Explorer 1', 'Sputnik 1')">Explorer 1</button>
+              <button onclick="checkAnswer('Vostok 1', 'Sputnik 1')">Vostok 1</button>
+              <button onclick="checkAnswer('Apollo 11', 'Sputnik 1')">Apollo 11</button>
+          </div>
+                
+        </body>
+        </html>
