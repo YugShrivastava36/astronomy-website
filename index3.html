@@ -97,13 +97,12 @@
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-}
-
-#backToHome:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-}
-             </style>
+        }
+            a {
+                color="white"
+            }
+             
+        </style>
          </head>
         <body>
             <h1>Astornomy Quiz!</h1>
@@ -116,12 +115,8 @@
                       alert(`Incorrect. The correct answer is ${correctAnswer}.`);
                   }
               }
-                function goToHome() {
-                  window.location.href = "index.html"; // Redirects to Astronomy VS.html
-              }
-             let score = 0;
-
-    function checkAnswer(userAnswer, correctAnswer) {
+                
+                function checkAnswer(userAnswer, correctAnswer) {
         if (userAnswer === correctAnswer) {
             score++;
             alert(`Correct! ${correctAnswer} is the right answer.`);
@@ -189,7 +184,9 @@
               <button onclick="checkAnswer('Vostok 1', 'Sputnik 1')">Vostok 1</button>
               <button onclick="checkAnswer('Apollo 11', 'Sputnik 1')">Apollo 11</button>
           </div>
-            <button id="backToHome" onclick="goToHome()">Back to Home</button>    
-            <button onclick="showScore()">Show Score</button>
-        </body>
+            <a href="index.html
+                target="_blank">
+                    Back to Home
+            </a>
+         </body>
         </html>
